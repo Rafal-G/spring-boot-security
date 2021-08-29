@@ -62,5 +62,6 @@ public class JwtTokenVerifier extends OncePerRequestFilter {
             throw new IllegalStateException("token cannot be verified " + token);
         }
 
+        filterChain.doFilter(request, response);
     }
 }
